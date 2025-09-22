@@ -58,6 +58,15 @@
       padding-top: 8px;
       padding-bottom: 8px;
     }
+    <div style="text-align:right; margin: 10px 0;">
+  <select id="languageSwitcher" style="padding:6px; border-radius:6px; border:none;">
+    <option value="en">🇬🇧 EN</option>
+    <option value="pt">🇵🇹 PT</option>
+    <option value="es">🇪🇸 ES</option>
+    <option value="fr">🇫🇷 FR</option>
+  </select>
+</div>
+
     .logo {
       font-weight: 800;
       letter-spacing: 0.12em;
@@ -235,8 +244,8 @@
     <section class="about">
       <h2>About me</h2>
       <p>
-        I play as a winger/wing-back and I’m building Aura as a way to share discipline, style, and motivation with my community.
-        Here you’ll find my official links — follow along and let’s grow together.
+     I play football and I’m building Aura as a way to share discipline, style, and motivation with my community.
+    Here you’ll find my official links — follow along and let’s grow together.
       </p>
     </section>
 <section class="socials" id="socials" aria-label="Social media links">
@@ -268,5 +277,51 @@
       Built with passion — Aura
     </footer>
   </div>
+  <script>
+  const translations = {
+    en: {
+      heroTitle: "Hi, I'm Daniel Couto",
+      heroSubtitle: "I'm a football player and the creator of Aura — a motivational clothing brand built to inspire you to chase your goals every day.",
+      aboutTitle: "About me",
+      aboutText: "I play football and I’m building Aura as a way to share discipline, style, and motivation with my community. Here you’ll find my official links — follow along and let’s grow together.",
+      motivationTitle: "Everything Starts With You",
+      motivationText: "Focus on the work, stay humble, and keep moving forward. Your energy, your rhythm, your style — that’s your Aura."
+    },
+    pt: {
+      heroTitle: "Olá, eu sou o Daniel Couto",
+      heroSubtitle: "Sou jogador de futebol e criador da Aura — uma marca de roupa motivacional feita para inspirar-te a correr atrás dos teus objetivos todos os dias.",
+      aboutTitle: "Sobre mim",
+      aboutText: "Jogo futebol e criei a Aura como uma forma de partilhar disciplina, estilo e motivação com a minha comunidade. Aqui encontras os meus links oficiais — segue e vamos crescer juntos.",
+      motivationTitle: "Tudo Começa Contigo",
+      motivationText: "Foca no trabalho, mantém-te humilde e continua a avançar. A tua energia, o teu ritmo, o teu estilo — essa é a tua Aura."
+    },
+    es: {
+      heroTitle: "Hola, soy Daniel Couto",
+      heroSubtitle: "Soy jugador de fútbol y creador de Aura — una marca de ropa motivacional diseñada para inspirarte a perseguir tus metas cada día.",
+      aboutTitle: "Sobre mí",
+      aboutText: "Juego al fútbol y creé Aura como una forma de compartir disciplina, estilo y motivación con mi comunidad. Aquí encontrarás mis enlaces oficiales — sígueme y crezcamos juntos.",
+      motivationTitle: "Todo Empieza Contigo",
+      motivationText: "Concéntrate en el trabajo, mantente humilde y sigue avanzando. Tu energía, tu ritmo, tu estilo — esa es tu Aura."
+    },
+    fr: {
+      heroTitle: "Salut, je suis Daniel Couto",
+      heroSubtitle: "Je suis footballeur et créateur d’Aura — une marque de vêtements motivationnelle conçue pour t’inspirer à poursuivre tes objectifs chaque jour.",
+      aboutTitle: "À propos de moi",
+      aboutText: "Je joue au football et j'ai créé Aura pour partager discipline, style et motivation avec ma communauté. Ici tu trouveras mes liens officiels — suis-moi et grandissons ensemble.",
+      motivationTitle: "Tout Commence Avec Toi",
+      motivationText: "Concentre-toi sur ton travail, reste humble et continue d’avancer. Ton énergie, ton rythme, ton style — c’est ton Aura."
+    }
+  };
+
+  document.getElementById("languageSwitcher").addEventListener("change", function () {
+    const lang = this.value;
+    document.querySelector("h1").textContent = translations[lang].heroTitle;
+    document.querySelector(".subtitle").textContent = translations[lang].heroSubtitle;
+    document.querySelector(".about h2").textContent = translations[lang].aboutTitle;
+    document.querySelector(".about p").textContent = translations[lang].aboutText;
+    document.querySelector(".motivation h3").textContent = translations[lang].motivationTitle;
+    document.querySelector(".motivation p").textContent = translations[lang].motivationText;
+  });
+</script>
 </body>
 </html>

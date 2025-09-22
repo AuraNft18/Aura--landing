@@ -127,29 +127,41 @@
       border: 1px solid var(--card-border);
       backdrop-filter: blur(8px);
     }
-    .socials {
-      margin: 40px auto 10px;
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 14px;
-      max-width: 560px;
-    }
+ <section class="socials" id="socials" aria-label="Social media links">
+  <a class="social-card" href="https://www.instagram.com/d18futebol?igsh=cWh1MndxaThveW0x" target="_blank" rel="noopener noreferrer">
+    Instagram
+  </a>
+  <a class="social-card" href="https://www.tiktok.com/@d18couto?_t=ZG-8zwFMgc9nAO&_r=1" target="_blank" rel="noopener noreferrer">
+    TikTok
+  </a>
+  <a class="social-card" href="https://x.com/Daniel131117?t=Jwsff3IbBoTXixBnkSCoIQ&s=09" target="_blank" rel="noopener noreferrer">
+    X / Twitter
+  </a>
+  <a class="social-card" href="https://www.auraclothe.com/en" target="_blank" rel="noopener noreferrer">
+    Visit Store
+  </a>
+</section>
+
 .social-card {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;           /* ocupa toda a coluna da grid */
   min-height: 48px;
   min-width: 120px;
-  font-weight: 600;
-  border-radius: 14px;
+  padding: 16px;
+  margin: 4px;           /* garante espaço entre botões mesmo lado a lado */
+  border-radius: 16px;
   background: var(--card);
   border: 1px solid var(--card-border);
   text-decoration: none;
   color: var(--link);
+  font-weight: 600;
+  text-align: center;
   transition: transform 0.16s ease, background 0.2s ease, box-shadow 0.2s ease;
   box-shadow: 0 8px 28px rgba(0,0,0,0.18);
-  text-align: center;
 }
+
 
     .social-card svg {
   width: 28px;

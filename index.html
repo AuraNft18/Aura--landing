@@ -149,11 +149,18 @@
       transition: transform 0.16s ease, background 0.2s ease, box-shadow 0.2s ease;
       box-shadow: 0 8px 28px rgba(0,0,0,0.18);
     }
-    .social-card:hover { transform: translateY(-2px); background: rgba(255,255,255,0.12); }
     .social-card svg {
-      width: 20px;
-      height: 20px;
-      flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 auto;
+  filter: drop-shadow(0 0 4px rgba(255,255,255,0.25));
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+.social-card:hover svg {
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 8px rgba(255,255,255,0.45));
+}
+    
     }
     @media (max-width: 600px) {
       .socials { grid-template-columns: repeat(2, minmax(0, 1fr)); }
